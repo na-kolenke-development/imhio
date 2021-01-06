@@ -1,7 +1,7 @@
-output "ip1" {
-  value = aws_eip.eip1.public_ip
+output "app_public_ip" {
+  value = aws_eip.app.public_ip
 }
 
-output "ip2" {
-  value = aws_eip.eip2.public_ip
+output "db_public_ip" {
+  value = aws_eip.db.public_ip
 }
