@@ -6,6 +6,9 @@ resource "aws_instance" "db" {
   subnet_id       = aws_subnet.subnet-main.id
   ebs_optimized   = true
   vpc_security_group_ids = [aws_security_group.allow_ssh.id, aws_security_group.mysql.id]
+  tags = {
+    Name = "db"
+  }
 }
 
 resource "aws_ebs_volume" "db" {
